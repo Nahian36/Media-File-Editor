@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="border" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="final_project.ImageCropController">
+   <top>
+      <HBox prefHeight="65.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="65.0" prefWidth="1200.0">
+               <children>
+                  <JFXButton alignment="CENTER" layoutX="1002.0" onAction="#maximize" prefHeight="66.0" prefWidth="92.0" styleClass="btn">
+                     <graphic>
+                        <ImageView fitHeight="56.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/max.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" layoutX="1101.0" onAction="#close" prefHeight="66.0" prefWidth="92.0" styleClass="btn_cross">
+                     <graphic>
+                        <ImageView fitHeight="56.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/cross.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" layoutX="900.0" onAction="#minimize" prefHeight="66.0" prefWidth="92.0" styleClass="btn">
+                     <graphic>
+                        <ImageView fitHeight="56.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/min.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXHamburger fx:id="hamburger" layoutY="2.0" onMousePressed="#ham" prefHeight="59.0" prefWidth="74.0" styleClass="btn">
+                     <children>
+                        <ImageView fitHeight="53.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/menu.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </JFXHamburger>
+                  <Text fill="#f8f6f6" layoutX="90.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Images" wrappingWidth="134.76708984375">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="39.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children></HBox>
+   </top>
+   <right>
+      <VBox prefHeight="582.0" prefWidth="406.0" styleClass="left_pane" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#f5f4f4" strokeType="OUTSIDE" strokeWidth="0.0" text="Crop" textAlignment="CENTER" wrappingWidth="404.6708984375">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="41.0" />
+               </font>
+            </Text>
+            <Separator prefWidth="200.0" styleClass="sep" stylesheets="@style.css" />
+            <Pane prefHeight="351.0" prefWidth="406.0">
+               <children>
+                  <JFXButton alignment="CENTER" layoutX="14.0" layoutY="14.0" onAction="#preview" prefHeight="74.0" prefWidth="219.0" styleClass="btn" text="Preview" textFill="#f8f6f6">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="28.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="54.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/preview.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" layoutX="14.0" layoutY="84.0" onAction="#crop" prefHeight="74.0" prefWidth="185.0" styleClass="btn" text="Crop" textFill="#f8f6f6">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="28.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="54.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/crop.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" layoutX="14.0" layoutY="158.0" onAction="#chooseFiles" prefHeight="74.0" prefWidth="185.0" styleClass="btn" text="Open" textFill="#f8f6f6">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="28.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="54.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/open.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXTextArea focusColor="WHITE" layoutY="364.0" prefHeight="160.0" prefWidth="405.0" styleClass="textA" text="Please choose two points one on the top-left corner and another on the bottom-right corner of the image to crop from the top-left corner to bottom-right corner." unFocusColor="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="21.0" />
+                     </font>
+                  </JFXTextArea>
+                  <Label fx:id="error_msg" layoutX="7.0" layoutY="297.0" prefHeight="21.0" prefWidth="391.0" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <JFXDrawer fx:id="drawer" defaultDrawerSize="190.0" direction="RIGHT" layoutX="201.0" prefHeight="527.0" prefWidth="200.0" />
+               </children>
+            </Pane>
+         </children></VBox>
+   </right>
+   <center>
+      <HBox alignment="CENTER_LEFT" prefHeight="550.0" prefWidth="1042.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <JFXButton alignment="CENTER" layoutX="-12.0" onAction="#filter" prefHeight="74.0" prefWidth="175.0" styleClass="btn" text="Filter" textFill="#f8f6f6">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="28.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="54.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/filter.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" layoutX="173.0" onAction="#scale" prefHeight="74.0" prefWidth="175.0" styleClass="btn" text="Scale" textFill="#f8f6f6">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="28.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="54.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/scalling.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" layoutX="358.0" prefHeight="74.0" prefWidth="175.0" styleClass="btn" text="Crop" textFill="#f8f6f6">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="28.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="54.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/crop.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <ImageView fx:id="view1" fitHeight="468.0" fitWidth="757.0" layoutX="15.0" layoutY="82.0" onMouseClicked="#mouseClicked" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+         </children></HBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="200.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/home.png" />
+         </image>
+      </ImageView>
+      <JFXButton accessibleText="video" prefHeight="65.0" prefWidth="200.0" styleClass="btn" text="Video" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="28.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="47.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/video.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton accessibleText="audio" prefHeight="60.0" prefWidth="200.0" styleClass="btn" text="Audio" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="28.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="48.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/audio.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton accessibleText="photo" prefHeight="65.0" prefWidth="200.0" styleClass="btn" text="Images" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="28.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="53.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/pic.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton accessibleText="search" prefHeight="65.0" prefWidth="200.0" text="Search" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="28.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="41.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/search.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</VBox>

@@ -1,0 +1,27 @@
+.root {
+    -fx-background-color: #000000;
+}
+
+.left_pane{
+    -fx-background-color: #000000;
+}
+
+.sep{
+   -fx-background-color: #000000; 
+}
+
+.btn:hover {
+    -fx-background-color:#2A55FF;
+}
+
+.btn_cross:hover {
+    -fx-background-color: #fa0505;
+}
+
+.textF {
+    -fx-text-inner-color: white;
+}
+
+.textA {
+    -fx-text-inner-color: white;
+}
